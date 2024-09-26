@@ -78,17 +78,10 @@ const UserPosts: React.FC = () => {
     </View>
   );
   const renderHeader = () => (
-    <View className="bg-white p-4 shadow-sm mb-4">
-      <View className="flex flex-row items-center justify-between">
-        <Text className="text-xl font-bold mb-0">{name} Posts</Text>
-        <View className="flex flex-row items-center gap-1">
-          <Ionicons name="mail" size={15} color="gray" />
-          <Text className="text-md font-JakartaSemiBold text-gray-600 flex items-center">
-            {email}
-          </Text>
-        </View>
-      </View>
-      <View className="flex flex-row justify-between mt-1">
+    <View className="bg-white p-4 shadow-sm my-4">
+        <Text className="text-xl  font-bold mb-0">
+          {name} Posts
+        </Text>
         <View className="flex flex-row items-center gap-1">
           <Ionicons name="link" size={15} color="gray" />
           <Text className="text-md font-JakartaSemiBold text-gray-600 flex items-center">
@@ -96,13 +89,19 @@ const UserPosts: React.FC = () => {
           </Text>
         </View>
         <View className="flex flex-row items-center gap-1">
+          <Ionicons name="mail" size={15} color="gray" />
+          <Text className="w-[100%] text-md font-JakartaSemiBold text-gray-600 flex items-center">
+            {email}
+          </Text>
+        </View>
+
+        <View className="flex flex-row items-center gap-1">
           <Ionicons name="call" size={15} color="gray" />
 
           <Text className="text-md font-JakartaSemiBold text-gray-600">
             {phone}
           </Text>
         </View>
-      </View>
     </View>
   );
   if (loading && posts.length === 0) {
